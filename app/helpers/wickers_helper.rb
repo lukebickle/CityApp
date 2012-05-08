@@ -1,0 +1,2 @@
+module WickersHelper
+end

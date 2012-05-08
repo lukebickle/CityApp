@@ -1,0 +1,25 @@
+<%= form_for(@wicker) do |f| %>
+  <% if @wicker.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@wicker.errors.count, "error") %> prohibited this wicker from being saved:</h2>
+
+      <ul>
+      <% @wicker.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.number_field :location %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
